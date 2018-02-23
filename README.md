@@ -3,6 +3,10 @@ fauria/nodemcu
 
 ![docker_logo](https://raw.githubusercontent.com/fauria/docker-nodemcu/master/docker_139x115.png)![docker_fauria_logo](https://raw.githubusercontent.com/fauria/docker-nodemcu/master/docker_fauria_161x115.png)
 
+[![Docker Pulls](https://img.shields.io/docker/pulls/fauria/nodemcu.svg?style=plastic)](https://hub.docker.com/r/fauria/nodemcu/)
+[![Docker Build Status](https://img.shields.io/docker/build/fauria/nodemcu.svg?style=plastic)](https://hub.docker.com/r/fauria/nodemcu/builds/)
+[![](https://images.microbadger.com/badges/image/fauria/nodemcu.svg)](https://microbadger.com/images/fauria/nodemcu "Get your own image badge on microbadger.com")
+
 This Docker image is intended to build and customize [NodeMcu](http://www.nodemcu.com/index_en.html) [firmware](https://github.com/nodemcu/nodemcu-firmware). NodeMcu is a [Lua](https://www.lua.org/) open-source firmware based on [ESP8266](https://www.espressif.com/en/products/hardware/esp8266ex/overview) wifi-soc.
 
 Installation from [Docker registry hub](https://registry.hub.docker.com/u/fauria/nodemcu/).
@@ -36,7 +40,7 @@ After exiting, there should be two files inside that directory named ```nodemcu/
 
 NodeMcu modules are selected using directives on the [```app/include/user_modules.h```](https://github.com/nodemcu/nodemcu-firmware/blob/master/app/include/user_modules.h) file. The default behaviour of this image is to leave that file as it is.
 
-If you want a customize module slection, you can run the container using environment variables in the form of ```ENABLE_ + module name```, such as ```ENABLE_WIFI``` or ```ENABLE_MQTT```.
+If you want a customized module slection, you can run the container using environment variables in the form of ```ENABLE_ + module name```, such as ```ENABLE_WIFI``` or ```ENABLE_MQTT```.
 
 Notice that **enabling a single module will disable every other module on the firmware**, unless explicitly enabled using ```ENABLE_ + module name```.
 
@@ -104,7 +108,7 @@ As a reference, release [2.1.0](https://github.com/nodemcu/nodemcu-firmware/rele
 - WS2812
 - XPT2046
 
-Note: bold modules are enabled by default.
+Note: bold names are enabled by default.
 
 Remember, any of these modules can be enabled using ```ENABLE_``` folowed by the module name.
 
@@ -112,7 +116,7 @@ For example, this command will have the same effect as running the container wit
 
 ```docker run --rm -v ${PWD}/nodemcu-firmware:/firmware -e ENABLE_ADC=1 -e ENABLE_BIT=1 -e ENABLE_DHT=1 -e ENABLE_FILE=1 -e ENABLE_GPIO=1 -e ENABLE_I2C=1 -e ENABLE_MQTT=1 -e ENABLE_NET=1 -e ENABLE_NODE=1 -e ENABLE_OW=1 -e ENABLE_SPI=1 -e ENABLE_TLS=1 -e ENABLE_TMR=1 -e ENABLE_UART=1 -e ENABLE_WIFI=1 fauria/nodemcu```
 
-You can use a file for those env vars and run Docker using the ```--env-file``` command line argument of [docker run](https://docs.docker.com/engine/reference/commandline/run/).
+You could save those env vars in a file and run Docker using the ```--env-file``` [command line argument](https://docs.docker.com/engine/reference/commandline/run/).
  
 
 #### Flashing the firmware
