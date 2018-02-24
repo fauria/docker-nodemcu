@@ -5,7 +5,7 @@ fauria/nodemcu
 
 [![Docker Pulls](https://img.shields.io/docker/pulls/fauria/nodemcu.svg?style=plastic)](https://hub.docker.com/r/fauria/nodemcu/)
 [![Docker Build Status](https://img.shields.io/docker/build/fauria/nodemcu.svg?style=plastic)](https://hub.docker.com/r/fauria/nodemcu/builds/)
-[![](https://images.microbadger.com/badges/image/fauria/nodemcu.svg)](https://microbadger.com/images/fauria/nodemcu "Get your own image badge on microbadger.com")
+[![](https://images.microbadger.com/badges/image/fauria/nodemcu.svg)](https://microbadger.com/images/fauria/nodemcu "fauria/nodemcu")
 
 This Docker image is intended to build and customize [NodeMcu](http://www.nodemcu.com/index_en.html) [firmware](https://github.com/nodemcu/nodemcu-firmware). NodeMcu is a [Lua](https://www.lua.org/) open-source firmware based on [ESP8266](https://www.espressif.com/en/products/hardware/esp8266ex/overview) wifi-soc.
 
