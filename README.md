@@ -9,7 +9,7 @@ fauria/nodemcu
 
 This Docker image is intended to build and customize [NodeMcu](http://www.nodemcu.com/index_en.html) [firmware](https://github.com/nodemcu/nodemcu-firmware). NodeMcu is a [Lua](https://www.lua.org/) open-source firmware based on [ESP8266](https://www.espressif.com/en/products/hardware/esp8266ex/overview) wifi-soc.
 
-Installation from [Docker registry hub](https://registry.hub.docker.com/u/fauria/nodemcu/).
+Installation from [Docker registry hub](https://registry.hub.docker.com/r/fauria/nodemcu/).
 ----
 
 Pull the image using the following command:
